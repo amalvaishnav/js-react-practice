@@ -1,5 +1,5 @@
-import NotesDisplayContainer from "./NotesDisplayContainer";
-import "./styles.css";
+import NotesDisplayContainer from "./NotesContainer";
+import "./App.css";
 import { createContext, useState } from "react";
 
 export const notesContext = createContext([]);
