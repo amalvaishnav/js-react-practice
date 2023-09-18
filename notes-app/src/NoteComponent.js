@@ -32,11 +32,15 @@ const NoteComponent = ({ item }) => {
           placeholder="edit the note here"
           value={editNote}
           onChange={onChange}
-          onMouseOut={() => onUpdate(item)}
+          // onMouseOut={() => onUpdate(item)}
         />
       )}
       {!isEdit && <button onClick={() => onEdit(item)}>edit</button>}
-      {isEdit && <button onClick={() => onUpdate(item)}>update</button>}
+      {isEdit && (
+        <button onClick={() => onUpdate(item)} disabled={editNote === ""}>
+          update
+        </button>
+      )}
       <button onClick={() => onDelete(item)}>Delete</button>
     </div>
   );
